@@ -3,9 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us – eUNLOCK</title>
+  <title>Contact Us – eUNLOCK Solutions</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+    main {
+      padding: 2rem;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -15,26 +61,29 @@
       <a href="features.html">Solutions</a>
       <a href="downloads.html">Downloads</a>
       <a href="team.html">Our Team</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
   </header>
+
   <main>
+    <h2>Send us a message</h2>
     <form action="https://formspree.io/f/meokbzle" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" name="name" required />
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
 
-      <label for="email">Email:</label>
-      <input type="email" name="email" required />
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
 
-      <label for="message">Message:</label>
-      <textarea name="message" required></textarea>
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
 
       <button type="submit">Send Message</button>
     </form>
   </main>
+
   <footer>
     <p>Contact: +94 77 8781092 | contact@eunlock.lk | Kurunegala</p>
-    <p>© eUNLOCK Solutions</p>
+    <p>© eUNLOCK Solutions 2019–2025</p>
   </footer>
 </body>
 </html>

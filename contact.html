@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF‑8">
-  <meta name="viewport" content="width=device-width,initial‑scale=1">
-  <title>Contact Us – eUNLOCK Solutions</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us – eUNLOCK</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
   <header>
@@ -12,24 +13,28 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="features.html">Solutions</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="team.html">Our Team</a>
       <a href="downloads.html">Downloads</a>
+      <a href="team.html">Our Team</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
   <main>
-    <section>
-      <form action="#" method="post">
-        <label>Name:</label><input type="text" name="name">
-        <label>Email:</label><input type="email" name="email">
-        <label>Message:</label><textarea name="message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+    <form action="https://formspree.io/f/meokbzle" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
   </main>
   <footer>
     <p>Contact: +94 77 8781092 | contact@eunlock.lk | Kurunegala</p>
-    <p>© eUNLOCK Solutions 2019–2025</p>
+    <p>© eUNLOCK Solutions</p>
   </footer>
 </body>
 </html>

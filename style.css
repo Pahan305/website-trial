@@ -1,0 +1,20 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; background-color: #f9f9f9; color: #333;
+}
+header {
+  background: #222; color: #fff; padding: 20px; text-align: center;
+}
+nav a {
+  color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold;
+}
+main { padding: 20px; }
+footer {
+  background: #222; color: #ccc; padding: 15px; text-align: center;
+}
+h2, h3 { color: #222; }
+section { margin-bottom: 30px; }
+form { max-width: 400px; margin: auto; }
+input, textarea { width: 100%; padding: 8px; margin-bottom: 10px; }
+button { background: #005bb5; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+button:hover { background: #004499; }

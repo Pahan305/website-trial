@@ -1,20 +1,211 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0; background-color: #f9f9f9; color: #333;
-}
-header {
-  background: #222; color: #fff; padding: 20px; text-align: center;
-}
-nav a {
-  color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold;
-}
-main { padding: 20px; }
-footer {
-  background: #222; color: #ccc; padding: 15px; text-align: center;
-}
-h2, h3 { color: #222; }
-section { margin-bottom: 30px; }
-form { max-width: 400px; margin: auto; }
-input, textarea { width: 100%; padding: 8px; margin-bottom: 10px; }
-button { background: #005bb5; color: white; padding: 10px 20px; border: none; cursor: pointer; }
-button:hover { background: #004499; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eUNLOCK Solutions</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    header {
+      background: #000;
+      padding: 1rem 0;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 1.8rem;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+    .nav-links a.active, .nav-links a:hover {
+      background: #007bff;
+    }
+    .hero {
+      position: relative;
+      background: linear-gradient(to right, #007bff, #00d4ff);
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.2);
+      z-index: 0;
+    }
+    .hero-text {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+      transition: background 0.3s ease;
+    }
+    .btn.primary {
+      background: #000;
+      color: white;
+    }
+    .btn.secondary {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+    .btn.primary:hover {
+      background: #333;
+    }
+    .btn.secondary:hover {
+      background: white;
+      color: #000;
+    }
+    .about {
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card h4 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+    .card .icon {
+      color: #007bff;
+    }
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    header.scrolled {
+      background-color: #111;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header id="navbar">
+    <div class="container header-content">
+      <h1 class="logo">🔓 eUNLOCK</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="features.html">Solutions</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-text container">
+      <h2>eUNLOCK Solutions</h2>
+      <p>Your Trusted Partner in Mobile Software Services</p>
+      <a href="features.html" class="btn primary">Get Started</a>
+      <button class="btn secondary" onclick="showWelcome()">Say Hello</button>
+    </div>
+  </section>
+
+  <section class="about container">
+    <h3>What We Offer</h3>
+    <div class="grid">
+      <div class="card">
+        <i class="fas fa-unlock-alt fa-2x icon"></i>
+        <h4>FRP Unlock</h4>
+        <p>Bypass FRP lock on Samsung, Xiaomi, Oppo & more</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-microchip fa-2x icon"></i>
+        <h4>Flash Tools</h4>
+        <p>Dead recovery, firmware upgrades, full system flashing</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tools fa-2x icon"></i>
+        <h4>Repair Solutions</h4>
+        <p>IMEI, Baseband, and software fix with professional tools</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>📞 +94 77 8781092 | 📧 contact@eunlock.lk</p>
+      <p>© 2019–2025 eUNLOCK Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector("header");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+    // Welcome alert
+    function showWelcome() {
+      alert("🌟 Welcome to eUNLOCK Solutions! Let’s unlock your success.");
+    }
+  </script>
+</body>
+</html>

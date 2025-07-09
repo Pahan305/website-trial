@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>eUNLOCK Solutions – Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eUNLOCK Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>eUNLOCK Solutions</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="features.html">Solutions</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="team.html">Our Team</a>
-      <a href="downloads.html">Downloads</a>
-    </nav>
+
+  <header id="navbar">
+    <div class="container header-content">
+      <h1 class="logo">🔓 eUNLOCK</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="features.html">Solutions</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section class="hero">
-      <h2>Leading Tech Company in Sri Lanka</h2>
-      <p>Specialized in Web Design, Android & Web Systems, IoT & More.</p>
-    </section>
-    <section class="about">
-      <h3>About Us</h3>
-      <p>We like to help others and see everybody enjoy the beauty of life.</p>
-    </section>
-  </main>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-text container">
+      <h2>eUNLOCK Solutions</h2>
+      <p>Your Trusted Partner in Mobile Software Services</p>
+      <a href="features.html" class="btn primary">Get Started</a>
+      <button class="btn secondary" onclick="showWelcome()">Say Hello</button>
+    </div>
+  </section>
+
+  <section class="about container">
+    <h3>What We Offer</h3>
+    <div class="grid">
+      <div class="card">
+        <i class="fas fa-unlock-alt fa-2x icon"></i>
+        <h4>FRP Unlock</h4>
+        <p>Bypass FRP lock on Samsung, Xiaomi, Oppo & more</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-microchip fa-2x icon"></i>
+        <h4>Flash Tools</h4>
+        <p>Dead recovery, firmware upgrades, full system flashing</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tools fa-2x icon"></i>
+        <h4>Repair Solutions</h4>
+        <p>IMEI, Baseband, and software fix with professional tools</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>Contact: +94 77 8781092 | contact@eunlock.lk | Kurunegala</p>
-    <p>© eUNLOCK Solutions 2019–2025</p>
+    <div class="container">
+      <p>📞 +94 77 8781092 | 📧 contact@eunlock.lk</p>
+      <p>© 2019–2025 eUNLOCK Solutions. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
